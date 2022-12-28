@@ -49,6 +49,14 @@ class TranslateDataCollector extends DataCollector implements DataCollectorInter
             $this->data[$name] = $method->getProfiles();
         }
     }
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function reset()
+    {
+        $this->data = [];
+    }
 
     /**
      * Returns profiles data.
