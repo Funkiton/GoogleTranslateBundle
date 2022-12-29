@@ -101,7 +101,7 @@ class Method
     {
         if ($this->stopwatch instanceof Stopwatch) {
             $this->profiles[$this->counter] = [
-                'query'        => urldecode($query),
+                'query'        => urldecode($query ?? ''),
                 'source'       => $source,
                 'target'       => $target,
                 'duration'     => null,
